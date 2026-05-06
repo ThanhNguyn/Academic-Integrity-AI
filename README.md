@@ -2,7 +2,7 @@
 **Sinh viên:** Nguyễn Tuấn Thành  
 **Mã sinh viên:** 25112107  
 **Đơn vị:** Đại học Quốc gia Hà Nội (VNU)  
-**Link Website:** https://[tên-người-dùng].github.io/Academic-Integrity-AI-25112107/
+**Link Website:** https://thanhnguyn.github.io/Academic-Integrity-AI/
 
 ---
 
