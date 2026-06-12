@@ -1,19 +1,33 @@
 import { useEffect, useRef, useState } from "react";
 import {
-  Folder,
-  FolderOpen,
-  FileCode,
-  X,
-  Copy,
-  Check,
-  Search,
-  ChevronRight,
-  ChevronDown,
-  Terminal,
-  ExternalLink,
-  Code,
-  FileImage
+  Folder as LucideFolder,
+  FolderOpen as LucideFolderOpen,
+  FileCode as LucideFileCode,
+  X as LucideX,
+  Copy as LucideCopy,
+  Check as LucideCheck,
+  Search as LucideSearch,
+  ChevronRight as LucideChevronRight,
+  ChevronDown as LucideChevronDown,
+  Terminal as LucideTerminal,
+  ExternalLink as LucideExternalLink,
+  Code as LucideCode,
+  FileImage as LucideFileImage
 } from "lucide-react";
+
+const Folder = LucideFolder as any;
+const FolderOpen = LucideFolderOpen as any;
+const FileCode = LucideFileCode as any;
+const X = LucideX as any;
+const Copy = LucideCopy as any;
+const Check = LucideCheck as any;
+const Search = LucideSearch as any;
+const ChevronRight = LucideChevronRight as any;
+const ChevronDown = LucideChevronDown as any;
+const Terminal = LucideTerminal as any;
+const ExternalLink = LucideExternalLink as any;
+const Code = LucideCode as any;
+const FileImage = LucideFileImage as any;
 
 export interface FileNode {
   name: string;
@@ -46,7 +60,70 @@ export const projectFilesMap: Record<string, FileNode[]> = {
               path: "src/app/components",
               type: "directory",
               children: [
-                { name: "code-viewer.tsx", path: "src/app/components/code-viewer.tsx", type: "file" }
+                { name: "code-viewer.tsx", path: "src/app/components/code-viewer.tsx", type: "file" },
+                {
+                  name: "media",
+                  path: "src/app/components/media",
+                  type: "directory",
+                  children: [
+                    { name: "ImageWithFallback.tsx", path: "src/app/components/media/ImageWithFallback.tsx", type: "file" }
+                  ]
+                },
+                {
+                  name: "ui",
+                  path: "src/app/components/ui",
+                  type: "directory",
+                  children: [
+                    { name: "accordion.tsx", path: "src/app/components/ui/accordion.tsx", type: "file" },
+                    { name: "alert-dialog.tsx", path: "src/app/components/ui/alert-dialog.tsx", type: "file" },
+                    { name: "alert.tsx", path: "src/app/components/ui/alert.tsx", type: "file" },
+                    { name: "aspect-ratio.tsx", path: "src/app/components/ui/aspect-ratio.tsx", type: "file" },
+                    { name: "avatar.tsx", path: "src/app/components/ui/avatar.tsx", type: "file" },
+                    { name: "badge.tsx", path: "src/app/components/ui/badge.tsx", type: "file" },
+                    { name: "breadcrumb.tsx", path: "src/app/components/ui/breadcrumb.tsx", type: "file" },
+                    { name: "button.tsx", path: "src/app/components/ui/button.tsx", type: "file" },
+                    { name: "calendar.tsx", path: "src/app/components/ui/calendar.tsx", type: "file" },
+                    { name: "card.tsx", path: "src/app/components/ui/card.tsx", type: "file" },
+                    { name: "carousel.tsx", path: "src/app/components/ui/carousel.tsx", type: "file" },
+                    { name: "chart.tsx", path: "src/app/components/ui/chart.tsx", type: "file" },
+                    { name: "checkbox.tsx", path: "src/app/components/ui/checkbox.tsx", type: "file" },
+                    { name: "collapsible.tsx", path: "src/app/components/ui/collapsible.tsx", type: "file" },
+                    { name: "command.tsx", path: "src/app/components/ui/command.tsx", type: "file" },
+                    { name: "context-menu.tsx", path: "src/app/components/ui/context-menu.tsx", type: "file" },
+                    { name: "dialog.tsx", path: "src/app/components/ui/dialog.tsx", type: "file" },
+                    { name: "drawer.tsx", path: "src/app/components/ui/drawer.tsx", type: "file" },
+                    { name: "dropdown-menu.tsx", path: "src/app/components/ui/dropdown-menu.tsx", type: "file" },
+                    { name: "form.tsx", path: "src/app/components/ui/form.tsx", type: "file" },
+                    { name: "hover-card.tsx", path: "src/app/components/ui/hover-card.tsx", type: "file" },
+                    { name: "input-otp.tsx", path: "src/app/components/ui/input-otp.tsx", type: "file" },
+                    { name: "input.tsx", path: "src/app/components/ui/input.tsx", type: "file" },
+                    { name: "label.tsx", path: "src/app/components/ui/label.tsx", type: "file" },
+                    { name: "menubar.tsx", path: "src/app/components/ui/menubar.tsx", type: "file" },
+                    { name: "navigation-menu.tsx", path: "src/app/components/ui/navigation-menu.tsx", type: "file" },
+                    { name: "pagination.tsx", path: "src/app/components/ui/pagination.tsx", type: "file" },
+                    { name: "popover.tsx", path: "src/app/components/ui/popover.tsx", type: "file" },
+                    { name: "progress.tsx", path: "src/app/components/ui/progress.tsx", type: "file" },
+                    { name: "radio-group.tsx", path: "src/app/components/ui/radio-group.tsx", type: "file" },
+                    { name: "resizable.tsx", path: "src/app/components/ui/resizable.tsx", type: "file" },
+                    { name: "scroll-area.tsx", path: "src/app/components/ui/scroll-area.tsx", type: "file" },
+                    { name: "select.tsx", path: "src/app/components/ui/select.tsx", type: "file" },
+                    { name: "separator.tsx", path: "src/app/components/ui/separator.tsx", type: "file" },
+                    { name: "sheet.tsx", path: "src/app/components/ui/sheet.tsx", type: "file" },
+                    { name: "sidebar.tsx", path: "src/app/components/ui/sidebar.tsx", type: "file" },
+                    { name: "skeleton.tsx", path: "src/app/components/ui/skeleton.tsx", type: "file" },
+                    { name: "slider.tsx", path: "src/app/components/ui/slider.tsx", type: "file" },
+                    { name: "sonner.tsx", path: "src/app/components/ui/sonner.tsx", type: "file" },
+                    { name: "switch.tsx", path: "src/app/components/ui/switch.tsx", type: "file" },
+                    { name: "table.tsx", path: "src/app/components/ui/table.tsx", type: "file" },
+                    { name: "tabs.tsx", path: "src/app/components/ui/tabs.tsx", type: "file" },
+                    { name: "textarea.tsx", path: "src/app/components/ui/textarea.tsx", type: "file" },
+                    { name: "toggle-group.tsx", path: "src/app/components/ui/toggle-group.tsx", type: "file" },
+                    { name: "toggle.tsx", path: "src/app/components/ui/toggle.tsx", type: "file" },
+                    { name: "tooltip.tsx", path: "src/app/components/ui/tooltip.tsx", type: "file" },
+                    { name: "use-mobile.ts", path: "src/app/components/ui/use-mobile.ts", type: "file" },
+                    { name: "utils.ts", path: "src/app/components/ui/utils.ts", type: "file" }
+                  ]
+                }
               ]
             }
           ]
@@ -183,7 +260,7 @@ export function CodeExplorer({
       setIsLoading(true);
       setError(null);
       try {
-        const baseUrl = import.meta.env.BASE_URL || "/";
+        const baseUrl = (import.meta as any).env?.BASE_URL || "/";
         const cleanBaseUrl = baseUrl.endsWith("/") ? baseUrl : baseUrl + "/";
         const fileUrl = `${cleanBaseUrl}source-code/${projectSlug}/${activeFile}`;
         
@@ -376,7 +453,7 @@ export function CodeExplorer({
 
             {activeFile && (
               <a
-                href={`${import.meta.env.BASE_URL || "/"}source-code/${projectSlug}/${activeFile}`}
+                href={`${(import.meta as any).env?.BASE_URL || "/"}source-code/${projectSlug}/${activeFile}`}
                 target="_blank"
                 rel="noreferrer"
                 className="grid h-8 w-8 place-items-center rounded hover:bg-white/5 text-stone-400 hover:text-white transition-colors"
@@ -490,7 +567,7 @@ export function CodeExplorer({
                   <div className="max-w-full max-h-full flex flex-col items-center gap-4 bg-[#080b10]/95 p-6 rounded-2xl border border-stone-900 shadow-2xl">
                     <div className="overflow-auto max-w-[80vw] max-h-[60vh] border border-stone-950 rounded bg-[#151b26]/50">
                       <img
-                        src={`${import.meta.env.BASE_URL || "/"}source-code/${projectSlug}/${activeFile}`}
+                        src={`${(import.meta as any).env?.BASE_URL || "/"}source-code/${projectSlug}/${activeFile}`}
                         alt={activeFile.split("/").pop() || ""}
                         className="object-contain max-h-[50vh] rounded"
                         style={{
